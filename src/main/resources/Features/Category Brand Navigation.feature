@@ -1,3 +1,4 @@
+@AutomationTag2
 Feature: View Products by Category and Brand
 
   Scenario: View products by category

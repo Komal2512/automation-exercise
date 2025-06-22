@@ -1,3 +1,4 @@
+@AutomationTag7
 Feature: Place Order with Registration and Login Scenarios
 
   Scenario Outline: Place Order - Register during checkout

@@ -1,3 +1,4 @@
+@AutomationTag1
 Feature: Shopping Cart Management
 
   Scenario: Adding multiple products to cart

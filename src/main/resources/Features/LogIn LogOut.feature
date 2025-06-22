@@ -1,3 +1,4 @@
+@AutomationTag6
 Feature: User Login and Logout Functionality
 
   Scenario Outline: Login with incorrect credentials

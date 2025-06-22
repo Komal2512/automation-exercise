@@ -1,3 +1,4 @@
+@AutomationTag5
 Feature: Verify Subscription Functionality on Home and Cart Pages
 
   Scenario Outline: Verify subscription functionality on Home Page

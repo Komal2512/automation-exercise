@@ -1,3 +1,4 @@
+@AutomationTag4
 Feature: Contact Us Form and Test Cases Page Verification
 
   Scenario Outline: Contact Us Form

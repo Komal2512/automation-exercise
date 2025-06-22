@@ -1,3 +1,4 @@
+@AutomationTag9
 Feature: Automation Exercise - Register User Validation
 
   Scenario Outline: User registers on the website

@@ -1,3 +1,4 @@
+@AutomationTag3
 Feature: Checkout Address Verification, Invoice Download, and Scroll Functionality
 
   Scenario Outline: Verify address details in checkout page

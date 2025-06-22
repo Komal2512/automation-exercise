@@ -1,3 +1,4 @@
+@AutomationTag8
 Feature: Product Details and Search Functionality
 
   Scenario: Verify all products and product detail page
