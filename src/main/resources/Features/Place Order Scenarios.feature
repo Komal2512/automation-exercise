@@ -6,6 +6,7 @@ Feature: Place Order with Registration and Login Scenarios
     When User navigates to "http://automationexercise.com"
     Then Verify that home page should be visible successfully
     When User clicks on Products button
+    Then User should be navigated to ALL PRODUCTS page successfully
     And user adds the first product to the cart
     And User clicks on View Cart button
     When User clicks Proceed To Checkout
@@ -53,6 +54,7 @@ Feature: Place Order with Registration and Login Scenarios
     When User clicks on Continue button
     Then Logged in as Name should be visible
     When User clicks on Products button
+    Then User should be navigated to ALL PRODUCTS page successfully
     And user adds the first product to the cart
     And User clicks on Cart button
     When User clicks Proceed To Checkout
@@ -67,8 +69,8 @@ Feature: Place Order with Registration and Login Scenarios
     And user close the window
 
     Examples:
-      | NamePrefix   | EmailPrefix | title | password    | day | month | year | FirstName | LastName | Company | Address1 | Address2 | Country | State | City      | Zipcode | MobileNumber |comment                              | Name     | Card Number      | CVC | Expiration |
-      | Trishna Goel | trishna     | Mrs   | Trishna@123 | 22  | December   | 2000 | Trishna   | Goel     | GHJ Ltd | Street 2 | Apt 101  | India   | Delhi | New Delhi | 110001  | 8899995999   |Please deliver between 9 AM and 5 PM | John Doe | 4111111111111111 | 723 | 12/30      |
+      | NamePrefix   | EmailPrefix | title | password    | day | month    | year | FirstName | LastName | Company | Address1 | Address2 | Country | State | City      | Zipcode | MobileNumber | comment                              | Name     | Card Number      | CVC | Expiration |
+      | Trishna Goel | trishna     | Mrs   | Trishna@123 | 22  | December | 2000 | Trishna   | Goel     | GHJ Ltd | Street 2 | Apt 101  | India   | Delhi | New Delhi | 110001  | 8899995999   | Please deliver between 9 AM and 5 PM | John Doe | 4111111111111111 | 723 | 12/30      |
 
   Scenario Outline: Place Order - Login before checkout
     Given User launches the browser
@@ -79,6 +81,7 @@ Feature: Place Order with Registration and Login Scenarios
     And user clicks on Login button
     Then Logged in as Name should be visible
     When User clicks on Products button
+    Then User should be navigated to ALL PRODUCTS page successfully
     And user adds the first product to the cart
     And User clicks on Cart button
     When User clicks Proceed To Checkout
@@ -93,5 +96,5 @@ Feature: Place Order with Registration and Login Scenarios
     And user close the window
 
     Examples:
-      | Email                | Password    |comment                              | Name     | Card Number      | CVC | Expiration |
-      | test1use@example.com | Test@123 |Leave the package at the front door | Test User | 4012888888881881 | 456 | 10/27     |
+      | Email                | Password | comment                             | Name      | Card Number      | CVC | Expiration |
+      | test1use@example.com | Test@123 | Leave the package at the front door | Test User | 4012888888881881 | 456 | 10/27      |
