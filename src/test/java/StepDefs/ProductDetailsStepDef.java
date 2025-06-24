@@ -315,12 +315,13 @@ public class ProductDetailsStepDef {
     public void userAddsTheFirstProductToTheCart() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement firstProduct = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("(//div[@class='product-overlay' or @class='product-image-wrapper'])[1]")));
+                By.xpath("(//div[@class='product-image-wrapper'])[1]")));
 
         Actions actions = new Actions(driver);
         actions.moveToElement(firstProduct).sendKeys(Keys.PAGE_DOWN).perform();
         WebElement addToCartButton = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("(//a[contains(text(),'Add to cart')])[1]")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addToCartButton);
         addToCartButton.click();
     }
 
@@ -336,7 +337,7 @@ public class ProductDetailsStepDef {
     public void userAddsTheSecondProductToTheCart() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement specificProduct = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//div[contains(@class,'productinfo')]//p[contains(text(),'Stylish Dress')]/ancestor::div[@class='product-overlay' or @class='product-image-wrapper']")));
+                By.xpath("//div[contains(@class,'productinfo')]//p[contains(text(),'Stylish Dress')]/ancestor::div[@class='product-image-wrapper']")));
         Actions actions = new Actions(driver);
         actions.moveToElement(specificProduct).perform();
         WebElement addToCartButton = specificProduct.findElement(
